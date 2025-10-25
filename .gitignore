@@ -1,0 +1,100 @@
+# ========================
+# 🌐 FLUTTER (Frontend)
+# ========================
+
+# Flutter/Dart build files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
+coverage/
+generated_plugin_registrant.dart
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/google-services.json
+*.keystore
+
+# iOS
+ios/Flutter/.symlinks/
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner.xcworkspace/
+ios/Runner.xcodeproj/project.xcworkspace/
+ios/.generated/
+
+# Web build output
+web_build/
+flutter_web/
+
+# VSCode / IntelliJ
+.vscode/
+.idea/
+*.iml
+
+# Mac / Linux system files
+.DS_Store
+Thumbs.db
+
+# ========================
+# 🐍 FLASK (Backend)
+# ========================
+
+# Python cache and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# Flask / app configs
+instance/
+*.db
+*.sqlite3
+*.sqlite
+*.log
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environment files
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ========================
+# 🧪 MISC / TOOLS
+# ========================
+# Jupyter / Notebooks
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Node (if using Firebase Hosting or tools)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# ========================
+# ✅ CUSTOM (Optional)
+# ========================
+# Temporary project notes or outputs
+tmp/
+logs/
+test_output/
