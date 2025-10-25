@@ -42,7 +42,7 @@ CREATE TABLE `usuario` (
   `email` varchar(50) NOT NULL,
   `user_name` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `enfoque` varchar(20) NOT NULL,
+  `enfoque` varchar(200) NOT NULL,
   `conocimiento` varchar(20) NOT NULL,
   `razon_aprender` varchar(30) NOT NULL,
   `meta_diaria` int(2) NOT NULL,
