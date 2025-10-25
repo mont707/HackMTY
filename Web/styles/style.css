@@ -1,0 +1,339 @@
+:root {
+  /* Colores principales */
+  --primary-color: #0B3D91;      /* Azul principal */
+  --secondary-color: #00c6ff;    /* Azul degradado / acento */
+  --third-color: #C0392B;
+  --background-color: #f7f9fc;   /* Fondo general */
+  --card-background: #f1f5ff;    /* Fondo de cards / secciones */
+  --text-color: #1a1a1a;         /* Texto principal */
+  --text-secondary: #555555;     /* Texto secundario */
+  --white: #ffffff;               /* Blanco para botones y textos */
+  --footer-bg: #0050ff;           /* Fondo del footer */
+  --footer-text: #d9e3ff;         /* Texto del footer */
+  
+  /* Estados / hover */
+  --btn-hover: #e8efff;           /* Hover de botones */
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+
+  /*Para trabajar rems como pixeles*/
+  font-size: 62.5%;
+
+  /*Scroll*/
+  /*scroll-snap-type: y mandatory;*/
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/*Definiciones Generales*/
+body{
+  font-size: 1.8rem;
+  font-family: 'Quicksand', sans-serif; 
+  color: var(--black);
+}
+
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 3.2rem;
+}
+h3{
+  font-size: 2.8rem;
+  color: var(--black);
+  font-weight: 900;
+}
+h4{
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+
+
+/*INDEX.HTML*/
+
+/*HEADER*/
+.principal_header {
+  background: var(--background-color);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.logo_icon {
+    width: 20rem;      /* tamaño del logo */
+    height: auto;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+.link:hover {
+  color: var(--white);
+  background: var(--primary-color);
+  transform: translateY(-2px);
+}
+.principal_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.principal_header.shrink {
+    padding: 0.4rem 5%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.principal_header.shrink .logo {
+    font-size: 2rem;
+}
+
+.principal_header.shrink .logo_icon {
+    width: 15rem;
+}
+.principal_header {
+  transition: padding 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.logo {
+  transition: font-size 0.4s ease;
+}
+
+.logo_icon {
+  transition: width 0.4s ease;
+}
+
+.link, .btn-primary {
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+
+/*HERO*/
+/*Boton de Get Started*/
+.btn-primary {
+    text-decoration: none;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/*FEATURES*/
+/* FEATURES SECTION */
+
+.features_container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* espacio entre cards */
+  margin: 5rem 0;
+  flex-wrap: wrap; /* responsivo: se bajan si no caben */
+}
+
+.feature {
+  background: var(--card-background);
+  border-radius: 15px;
+  padding: 2rem;
+  flex: 1 1 30%; /* ocupa 30% cada card, crece si hay espacio */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.feature h3 {
+  color: var(--primary-color);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.feature p {
+    font-size: 1.6rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+
+
+/*FOOTER*/
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+}
+
+footer h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+footer p {
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+footer b {
+  color: var(--secondary-color);
+}
+
+/* Links de contacto (si agregas) */
+footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+
+/*LogIn*/
+/* LOGIN SECTION */
+/* LOGIN SECTION */
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12rem 2rem; /* más espacio arriba */
+    min-height: calc(100vh - 8rem);
+    background: var(--background-color);
+}
+
+.login_form {
+    background: var(--card-background);
+    padding: 4rem 3rem; /* más grande */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 450px; /* un poquito más ancho */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login_form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.login_form h2 {
+    font-size: 2.8rem; /* más grande */
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+.login_form label {
+    display: block;
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+    color: var(--text-color);
+}
+
+.login_form input {
+    width: 100%;
+    padding: 1rem 1.2rem; /* más grande */
+    margin-bottom: 1.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login_form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(11, 61, 145, 0.3);
+    outline: none;
+}
+
+.login_form .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.9rem; /* botón más grande */
+    border-radius: 30px;
+    margin-top: 0.5rem;
+}
+
+.login_note {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.login_note a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login_note a:hover {
+    color: var(--primary-color);
+}
+
